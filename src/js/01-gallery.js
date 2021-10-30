@@ -19,4 +19,4 @@ const itemsImages = galleryItems
 
 divGalleryRef.insertAdjacentHTML('afterbegin', itemsImages);
 
-let gallery = new SimpleLightbox('.gallery a',{ captions: true });
+let gallery = new SimpleLightbox('.gallery a', { captions: true });
