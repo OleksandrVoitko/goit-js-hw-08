@@ -5,12 +5,15 @@ const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
 let currentTime = 0;
 
-currentTime = localStorage.getItem("videoplayer-current-time");
+currentTime = localStorage.getItem('videoplayer-current-time');
 
 if (currentTime > 0) {
-    player.setCurrentTime(currentTime);
+  player.setCurrentTime(currentTime);
 }
 
-player.on('timeupdate', throttle((data) => {
-    localStorage.setItem("videoplayer-current-time", data.seconds)
-  }, 1000));
+player.on(
+  'timeupdate',
+  throttle(data => {
+    localStorage.setItem('videoplayer-current-time', data.seconds);
+  }, 1000),
+);
